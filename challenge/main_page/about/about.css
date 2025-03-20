@@ -1,0 +1,139 @@
+.title {
+    font-family: goudy stout;
+ }
+.header {
+    height: 79.2px;
+    display: flex;
+
+}
+
+.menu_bar {
+    height: 79.2px;
+    
+    
+    background-image: linear-gradient(to bottom, #90e0ef,  #caf0f8);
+    color: white;
+    display: flex;
+}
+.logo {
+    background-color:transparent;
+    color: black;
+    font-size: 50px;
+    font-family: "times new roman";
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    height: 70px;
+    width: 305px;
+    margin-left: 40px;
+    margin-top: 0.2px;
+    margin-bottom: 0.2px;
+   
+}
+
+.account {
+    margin-left: 70%;
+    margin-right: 2px;
+    margin-top: 6px;
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    width: 250px;
+    height: 45px;
+    padding-top:15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 5px;
+    font-family: "Bradley Hand ITC";
+    color: black;
+    font-size: 22px;
+
+}
+
+.account a {
+    text-decoration: none;
+    color: #04471c
+    
+}
+
+.account a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+
+/* header completed */
+
+
+.statement {
+   
+    background-color: #caf0f8;
+    margin-top: 0px;
+}
+
+.sec_1 {
+    background-color: #caf0f8;
+}
+
+.sec_2 {
+    margin-top: 0px;
+    padding: 40px 0;
+    background-image: linear-gradient(to bottom,  #caf0f8, #ade8f4,#90e0ef, #90e0ef);
+   padding-right: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    height: 1100px;
+    font-size: 20px;
+    border: 0px;
+    text-align: left;
+
+
+
+}
+
+.sec_2 h1 {
+    
+    font-size: 25px;
+    font-family: "forte";
+    text-align: left;
+  padding-top: 0px;
+  font-size: 2.5em;
+  margin-left: 30px;
+  
+}
+
+.sec_3 {
+    display: flex;
+}
+
+.img_box {
+    background-image: url("about.png");
+    height: 700px;
+    width: 558px;
+    margin-top: 212px;
+    margin-left: 0px;
+    background-color: transparent;
+
+}
+
+
+.about {
+    height: 800px;
+    width: 920px;
+    margin-left: 15px;
+    
+    text-align: left;
+}
+
+
+/* Footer */
+footer {
+    background-color: white;
+    background-image: linear-gradient(to bottom,  #caf0f8, #ade8f4,#90e0ef, #90e0ef);
+    /* background-image: url("footer.png"); */
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}

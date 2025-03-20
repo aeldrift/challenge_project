@@ -1,0 +1,158 @@
+.title {
+    font-family: goudy stout;
+ }
+.header {
+    height: 79.2px;
+    display: flex;
+
+}
+
+.menu_bar {
+    height: 79.2px;
+    
+    
+    background-image: linear-gradient(to right, #d3fade, #98dda2, #52b788 );
+    color: white;
+    display: flex;
+}
+.logo {
+    background-color:transparent;
+    color: black;
+    font-size: 50px;
+    font-family: "times new roman";
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    height: 70px;
+    width: 305px;
+    margin-left: 40px;
+    margin-top: 0.2px;
+    margin-bottom: 0.2px;
+   
+}
+
+
+.account {
+    margin-left: 65%;
+    margin-right: 2px;
+    margin-top: 6px;
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    width: 250px;
+    height: 45px;
+    padding-top:15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 5px;
+    font-family: "Bradley Hand ITC";
+    color: black;
+    font-size: 22px;
+
+}
+
+.account a {
+    text-decoration: none;
+    color: #04471c
+    
+}
+
+.account a:hover {
+    text-decoration: underline;
+}
+
+.body {
+    background-image: linear-gradient(to right, #d3fade, #98dda2, #52b788 );
+}
+/* header completed */
+
+/* Contact Section */
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin-left: 250px;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #333;
+    margin-left: 540px;
+    margin-top: 2rem;
+    border-radius: 2px;
+}
+
+.contact {
+    margin-top: 0px;
+    padding: 40px 0;
+    background-image: linear-gradient(to right, #d3fade, #98dda2, #52b788 );
+    display: flex;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    height: 550px;
+   
+
+
+}
+
+.contact form input,
+.contact form textarea {
+    width: 70%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 250px;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+    border-color: #555;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact form button {
+    display: block;
+    margin-left: 960px;
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    background-image: linear-gradient(to right, #d3fade, #98dda2, #52b788 );
+    /* background-image: url("footer.png"); */
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}

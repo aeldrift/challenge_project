@@ -1,0 +1,441 @@
+.title {
+    font-family: goudy stout;
+ }
+.header {
+    height: 79.2px;
+    display: flex;
+
+}
+
+.menu_bar {
+    height: 79.2px;
+    
+    
+   background-image: linear-gradient(to right, #d3fade, #98dda2, #92e6a7 );
+    color: white;
+    display: flex;
+}
+.logo {
+    background-color:transparent;
+    color: black;
+    font-size: 50px;
+    font-family: "times new roman";
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    height: 70px;
+    width: 305px;
+    margin-left: 40px;
+    margin-top: 0.2px;
+    margin-bottom: 0.2px;
+   
+}
+
+
+.account {
+    margin-left: 53%;
+    margin-right: 2px;
+    margin-top: 6px;
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    width: 250px;
+    height: 45px;
+    padding-top:15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 5px;
+    font-family: "Bradley Hand ITC";
+    color: black;
+    font-size: 22px;
+
+}
+
+.account a {
+    text-decoration: none;
+    color: #04471c
+    
+}
+
+.account a:hover {
+    text-decoration: underline;
+}
+
+/* main section  */
+
+.main_sec {
+    height: 900px;
+    background-image: linear-gradient(to right, #d3fade, #98dda2, #92e6a7 );
+    margin-top: 0px;
+    
+}
+
+
+.heading {
+    font-size: 25px;
+    font-family: "forte";
+    text-align: center;
+  padding-top: 2rem;
+  font-size: 3.5em;
+  
+}
+
+.statement {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+/* sign upoptions */
+
+.sec1 {
+    height: 45px;
+    width: 450px;
+    align-items: left;
+    background-color: rgb(23, 93, 233);
+    display: flex;
+    margin-left: 547px;
+    margin-top: 2.5rem;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 3px;
+   
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+   
+}
+
+.outer_box {
+    background-color: white;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+ }
+
+.box {
+    background-color: white;
+    width: 50px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+}
+
+.icon1{
+    align-items: center;
+    font-size: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: linear-gradient(to right, #d3fade, #98dda2, #92e6a7 );
+
+}
+
+.line {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 55px;
+   
+}
+
+
+
+
+/*styles.css*/
+svg {
+    margin: 30px;
+    font-size: 140px;
+    color: #ffffff;
+    background-image: linear-gradient(
+      150deg,
+      #ff4800 13.4%,
+      #da54d8 50%,
+      #0092f4 86.6%
+    );
+  }
+  
+ 
+  /* Gradient Text to icon */
+  .box {
+    background-image: linear-gradient(180deg, #FF3D00,#FF3D00, #FFC107, #4CAF50);
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Circle icon with a circular gradient image background */
+  svg.circle {
+    background-image: conic-gradient(
+      from 10deg,
+      #ff4800 10%,
+      #dfd902 5%,
+      #4CAF50 15%
+     
+    );
+  }
+  
+  .hover-me {
+    text-align: center;
+  }
+  
+/* secton 2 by  microsoft */
+.sec2 {
+    height: 45px;
+    width: 450px;
+    align-items: left;
+    background-color: rgb(48, 48, 55);
+    display: flex;
+    margin-left: 547px;
+    margin-top: 1.5rem;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 3px;
+   
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+   
+}
+
+.icon2{
+    align-items: center;
+    font-size: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+
+}
+
+.line2 {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 55px;
+   
+}
+/* sec3 by apple */
+
+.sec3 {
+    height: 45px;
+    width: 450px;
+    align-items: left;
+    background-color: white;
+    display: flex;
+    margin-left: 547px;
+    margin-top: 1.5rem;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 3px;
+   
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+   
+}
+
+.icon3{
+    align-items: center;
+    font-size: 35px;
+    padding-top: 3.5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: black;
+
+}
+
+.line3 {
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 55px;
+   
+}     
+
+/* sec3 completed */
+
+
+
+/* or part (by email) */
+
+
+.choice {
+    height: 30px;
+    width: 498px;
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    margin-left: 520px;
+    margin-top: 0.5rem;
+    font-size: 25px;
+    font-family: ;
+
+    
+    padding-left: 5px;
+    padding-right: 3px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+   
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #333d29;
+
+}
+
+.or {
+    font-size: 2rem;
+    width: 50px;
+    text-align: center;
+    margin-top: 1.2rem;
+    background-color:transparent;
+    color: #333d29;
+    
+}
+
+.mail {
+    height: 45px;
+    width: 470px;
+    font-size: 2rem;
+    color: #333d29;
+    align-items: left;
+    background-color: transparent;
+    display: flex;
+    margin-left: 520px;
+    /* margin-top: 0.2rem; */
+
+    padding-top: 0px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 3px;
+   
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+   
+}
+
+.mail_address {
+    height: 45px;
+    width: 500px;
+    align-items: left;
+    background-color: transparent;
+    display: flex;
+    margin-left: 520px;
+    margin-top: 0.1rem;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 3px;
+   
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-decoration: none;
+   
+}
+
+.input_mail {
+    width: 590px;
+    border-bottom: 5px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: transparent;
+    text-decoration: none;
+    
+}
+
+/* verifying mail */
+
+.verify {
+    height: 45px;
+    width: 500px;
+    align-items: left;
+    background-color: #dfe4db;
+    display: flex;
+    margin-left: 520px;
+    margin-top: 1.5rem;
+    
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 3px;
+   
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+   
+}
+
+.verify button{
+
+    width: 800px;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 55px;
+    background-color: #dfe4db;
+}
+
+.line4 {
+    color: black;
+     font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 150px;
+   
+}     
+
+.policy {
+    height: 90px;
+    width: 460px;
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    margin-left: 550px;
+    margin-top: 1rem;
+    font-size: 15px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 5px;
+   
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+   
+}
+
+.policy a {
+    text-decoration: none;
+}
+
+.policy a:hover {
+    text-decoration: underline;
+}
