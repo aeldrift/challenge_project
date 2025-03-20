@@ -1,0 +1,4 @@
+aiohttp
+pipecat-ai[daily,google,openai,silero]==0.0.50
+google-api-python-client
+google-genai
