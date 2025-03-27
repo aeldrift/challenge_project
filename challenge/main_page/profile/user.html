@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="user.css">
+
+</head>
+<body>
+    <header class="header">
+        <h1>Agrisaarthi</h1>  
+        <nav class="nav-links">
+            <a onclick="scrollToSection('home_options')"> Dashboard </a> 
+            <a href="#">Marketplace</a>
+            <!-- <a href="#">Support</a> -->
+            <!-- <div class="options"> -->
+                <select id="language-selector nav-links">
+                       <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+        </nav>
+        
+            <div class="user-menu">
+                <button id="user-button"><i class="fa-solid fa-user"></i>   </button>
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="#">Profile</a>
+                    <!-- <a href="#">Settings</a> -->
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <script>
+        document.getElementById("user-button").addEventListener("click", function () {
+            var dropdown = document.getElementById("user-dropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
+        window.addEventListener("click", function (e) {
+            if (!document.querySelector(".user-menu").contains(e.target)) {
+                document.getElementById("user-dropdown").style.display = "none";
+            }
+        });
+    </script>           <!-- hero section starts -->
+    <div class="main">
+<section class="hero">
+        <h1 id="welcome-message">Welcome </h1>
+        <h3>Here’s your activity – track your progress, purchases, and learning journey.</h3>
+        <div class="buttons">
+            <button onclick="viewHistory()">View History</button>
+            <button id="trackOrderBtn">Track Order</button> </div>
+      
+    <div id="orderPage" class="overlay hidden">
+        <div class="order-content">
+            <button class="close-btn" onclick="closeOrderPage()"><i class="fa-solid fa-xmark"></i></button>   <!-- popup webpage closing option -->
+  <!-- popup webpage's header         -->
+   
+       <div class="header">
+            <h3>Agrisaarthi</h3>  
+            <nav class="nav-links links2">
+         
+                
+                    <select id="language-selector nav-links">
+                           <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+            </nav>  </div>
+            
+    <h2> Keep track of all your orders</h2>
+    <div id="orders" style="display: flex; gap: 20px;"></div>
+
+    <script>
+        const orders = ["Order 1"]; // Example orders
+        
+        const ordersContainer = document.getElementById("orders");
+        
+        orders.forEach((order, index) => {
+            const orderDiv = document.createElement("div");
+            orderDiv.classList.add("order-container");
+            
+            const circle = document.createElement("div");
+            circle.classList.add("order-circle");
+            circle.textContent = order;
+            
+            const button = document.createElement("button");
+            button.classList.add("order-button");
+            button.textContent = "track live";
+            button.onclick = () => alert(`You clicked on ${order}`);
+            
+            orderDiv.appendChild(circle);
+            orderDiv.appendChild(button);
+            ordersContainer.appendChild(orderDiv);
+        });
+    </script>
+            
+                
+        </div>
+        </header>
+            </header>
+            
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("trackOrderBtn").addEventListener("click", function() {
+            document.getElementById("orderPage").style.display = "flex";
+            document.getElementById("mainPage").classList.add("blurred");
+        });
+
+        function closeOrderPage() {
+            document.getElementById("orderPage").style.display = "none";
+            document.getElementById("mainPage").classList.remove("blurred");
+        }
+    </script>
+    
+    <style>
+        .hidden { display: none; }
+        .container { text-align: center; margin-top: 50px; transition: filter 0.3s ease-in-out; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        .overlay { 
+            position: fixed; 
+            top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(0, 0, 0, 0.7); 
+            display: none; justify-content: center; align-items: center; 
+        }
+        .order-content {
+            background: white; padding: 2px;height: 500px; border-radius: 5px; 
+            text-align: center; width: 1000px; position: relative;
+        }
+        .close-btn {
+            position: absolute; top: 2px; right: 2px; font-size: 2px; 
+            cursor: pointer; color: #398a56; border: none; background: none;
+        }
+        .blurred { filter: blur(0px); }
+    </style>
+
+
+
+    </section>
+
+    <script>
+        // Function to get user's name (simulated login system)
+        function getUser() {
+            let userName = localStorage.getItem("userName");
+
+            if (!userName) {
+                userName = prompt("Enter your name:");
+                localStorage.setItem("userName", userName);
+            }
+
+            document.getElementById("welcome-message").innerText = `Welcome, ${userName}!`;
+        }
+
+        function viewHistory() {
+            alert("Redirecting to Activity History..."); 
+        }
+
+        function trackProgress() {
+            alert("Redirecting to Progress Tracking...");
+        }
+
+        // Load user on page load
+        window.onload = getUser;
+    </script>
+    </div>
+    </body>
+
+    <footer>
+        <p>&copy; 2025 Easy Solutions. All rights reserved.</p>
+    </footer>
+</body>
+</html>

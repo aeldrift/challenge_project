@@ -1,0 +1,111 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #398a56;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+.options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+select, button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.user-menu {
+    position: relative;
+}
+
+.account {
+    margin-left: 70%;
+    margin-top: 0px;
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    width: 100px;
+    height: 65px;
+    padding: 2px;
+
+}
+/* account icon's circle */
+.account_icon {
+
+    border: 4px solid white;
+    height: 40px;
+    width: 45px;
+
+    border-top-right-radius: 27px;
+    border-bottom-right-radius: 27px;
+    border-top-left-radius: 27px;
+    border-bottom-left-radius: 27px;
+
+    margin-left: 25px;
+    margin-top: 15px;
+    
+
+}
+
+
+/* user icon used */
+
+.user {
+    font-size: 32px;
+    align-items: center;
+    margin-top: 8px;
+    margin-left: 9px;
+    color: white;
+}
+y
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.user-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.user-dropdown a:hover {
+    background: #ddd;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    /* background-color: black; */
+    background-color: white
+}

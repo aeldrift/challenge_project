@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marketplace</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="user.css">
+
+</head>
+<body>
+    <header class="header">
+        <h1>Agrisaarthi</h1>
+        <nav class="nav-links">
+            <a href="user.html">Dashboard</a>
+            <a onclick="scrollToSection('home_options')">Marketplace </a> 
+            <!-- <a href="#">Support</a> -->
+            <!-- <div class="options"> -->
+                <select id="language-selector nav-links">
+                       <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+        </nav>
+        
+            <div class="user-menu">
+                <button id="user-button"><i class="fa-solid fa-user"></i>   </button>
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="#">Profile</a>
+                    <!-- <a href="#">Settings</a> -->
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <script>
+        document.getElementById("user-button").addEventListener("click", function () {
+            var dropdown = document.getElementById("user-dropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
+        window.addEventListener("click", function (e) {
+            if (!document.querySelector(".user-menu").contains(e.target)) {
+                document.getElementById("user-dropdown").style.display = "none";
+            }
+        });
+    </script>  
