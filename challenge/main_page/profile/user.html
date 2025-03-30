@@ -15,6 +15,14 @@
         <h1>Agrisaarthi</h1>  
         <nav class="nav-links">
             <a onclick="scrollToSection('home_options')"> Dashboard </a> 
+    <script>
+    function scrollToSection(id) {
+        const account= document.getElementById(id);
+        if (account) {
+            account.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
             <a href="#">Marketplace</a>
             <!-- <a href="#">Support</a> -->
             <!-- <div class="options"> -->
