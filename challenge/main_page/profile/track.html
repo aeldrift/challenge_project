@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="track.css">
+
+</head>
+<body>
+    <header class="header">
+        <h1>Agrisaarthi</h1>  
+        <nav class="nav-links">
+            <!-- <a href="#">Support</a> -->
+            <!-- <div class="options"> -->
+                <select id="language-selector nav-links">
+                       <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>  </nav>
+         </header>
+
+<div class="map_bg">
+ <!-- image inserted -->
+    <div class="map_area"> 
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Google Maps Integration</title>
+            
+            <style>
+                /* Style for the map container */
+                #map {
+                    height: 500px;  /* Adjust the height */
+                    width: 100%;    /* Full width */
+                    border: 2px solid #333; /* Optional border */
+                    border-radius: 10px; /* Rounded corners */
+                }
+            </style>
+        </head>
+        <body>
+        
+            <h2>My Google Map</h2>
+            
+            <div id="map"></div> <!-- Map will be loaded here -->
+        
+            <script>
+                function initMap() {
+                    // Define location (latitude, longitude)
+                    var location = { lat: 28.6139, lng: 77.2090 }; // New Delhi
+                    
+                    // Create a new map
+                    var map = new google.maps.Map(document.getElementById("map"), {
+                        zoom: 10,  // Zoom level (1-20)
+                        center: location
+                    });
+        
+                    // Add a marker on the map
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map,
+                        title: "New Delhi"
+                    });
+                }
+            </script>
+        
+            <!-- Load Google Maps API -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU-yBhTWxUNdbeOm7RIqTkjXahlnL_emc&callback=initMap" async defer></script>
+ </div> </div>
+</body>
+
+<footer>
+    <p>&copy; 2025 Easy Solutions. All rights reserved.</p>
+</footer>
+
+</html>
