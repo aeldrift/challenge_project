@@ -245,6 +245,25 @@ body {
     border-radius: 10px;
 }
 
+.hidden { display: none; }
+.container { text-align: center; margin-top: 50px; transition: filter 0.3s ease-in-out; }
+button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+.overlay { 
+    position: fixed; 
+    top: 0; left: 0; width: 100%; height: 100%; 
+    background: rgba(0, 0, 0, 0.7); 
+    display: none; justify-content: center; align-items: center; 
+}
+.order-content {
+    background: white; padding: 2px;height: 500px; border-radius: 5px; 
+    text-align: center; width: 1000px; position: relative;
+}
+.close-btn {
+    position: absolute; top: 2px; right: 2px; font-size: 2px; 
+    cursor: pointer; color: #398a56; border: none; background: none;
+}
+.blurred { filter: blur(0px); }
+
 /* Footer */
 footer {
     background-color: #398a56;
