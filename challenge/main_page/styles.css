@@ -34,10 +34,27 @@
    
 }
 
+.selector{
+    display: flex;
+    height: 22px;
+    width: 50px;
+    background-color: transparent;
+    margin-left: 950px;
+    padding-right: 55px;
+    margin-top: 22px;
+    text-align: center;
+    
 
+   
+}
+
+.lang_selector {
+     margin-top: 205px;
+    
+}
 .account {
     margin-left: 70%;
-    margin-top: 6px;
+    margin-top: 0px;
     text-align: center;
     background-color: transparent;
     display: flex;
@@ -59,7 +76,7 @@
     border-bottom-left-radius: 27px;
 
     margin-left: 25px;
-    margin-top: 10px;
+    margin-top: 15px;
     
 
 }
@@ -71,6 +88,7 @@
     font-size: 32px;
     align-items: center;
     margin-top: 8px;
+    margin-left: 9px;
     color: white;
 }
 
@@ -165,6 +183,16 @@
     margin-left: 45px;
     align-items: center;
     background-color: none;
+    .options {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    select, button {
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+    }
     
 }
 
@@ -247,7 +275,7 @@ button:hover {
     
 }
 
-.search-select {
+/* .search-select {
     background-color: white;
     width: 60px;
     text-align: center;   
@@ -256,7 +284,7 @@ button:hover {
    justify-content: space-evenly;
    border-top-left-radius: 25px;
    border-bottom-left-radius: 25px;
-}
+} */
 .search-input:hover {
     text-decoration: none;
 }
@@ -267,6 +295,8 @@ button:hover {
     border: none;
     align-items: center;
     height: 50px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
    
 
 }
