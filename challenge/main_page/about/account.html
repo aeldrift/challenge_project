@@ -38,91 +38,55 @@
         Let's thrive in the future of smart farming together. 
      </div>     <!-- satement div closed -->
 
-     <!-- sign up section -->
-      <!-- by google -->
-     <div class="sec1"> 
-        <div class="outer_box">       
-              <div class="box"> <i class="fa-brands fa-google icon1"></i>
-         </div> 
-     </div> <!-- icon div closed -->
-        <div class="line"><strong> Continue with Google </strong> </div>  
-        <!-- line div closed -->
-        </div>
-    
+     <!-- Removed social signup sections (sec1, sec2, sec3) -->
+     <!-- Removed the "Or" divider (choice) -->
 
-   
-
-   <!-- by microsoft -->
-   <div class="sec2"> 
-          
-          <div class="icon"><i class="fa-brands fa-microsoft icon2"></i>
-    
- </div> <!-- icon div closed -->
-    <div class="line2"><strong> Sign up with Microsoft </strong> </div>  
-    <!-- line div closed -->
+    <!-- Keep only the email/password form -->
+    <form id="signup-form" style="margin-top: 20px; /* Add some space */">
+        <div class="mail">
+        Full Name
     </div>
- 
+    <div class="mail_address">
+        <!-- Added name input with id -->
+        <input placeholder="Enter your full name" class="input_mail" id="name" type="text" required>
+    </div>
 
+    <div class="mail" style="margin-top: 15px;">
+        Email address
+    </div>
+    <div class="mail_address">
+        <!-- Added id="email" -->
+        <input placeholder="abc@gmail.com" class="input_mail" id="email" type="email" required>
+    </div>
 
+    <div class="mail" style="margin-top: 15px;">
+        Password
+    </div>
+    <div class="mail_address">
+        <!-- Added password input with id -->
+        <input placeholder="Create a password" class="input_mail" id="password" type="password" required>
+    </div>
 
-<!-- by apple -->
+    <!-- mail input is done -->
+    <!-- verifying mail -->
 
-<div class="sec3"> 
-          
-    <div class="icon3"><i class="fa-brands fa-apple"></i>
-
-</div> <!-- icon div closed -->
-<div class="line3"><strong> &nbsp; &nbsp; Sign up with Apple  </strong> </div>  
-<!-- line div closed -->
-</div>
-
-
-<!-- sec3 completed -->
-
-<!-- .or part -->
-
-<div class="choice">
-   <strong> __________________ </strong>
-    <div class="or"> Or</div>
-<strong> __________________</strong>
-
-</div>
-
-<div class="mail"> 
-          Email address 
-   </div>
-   <div class="mail_address">
-    
-    <input placeholder="abc@gmail.com" class="input_mail">
-
-   </div>
-
-   <!-- mail input is done -->
-<!-- verifying mail -->
-
-<div class="verify"> 
-          
-   
-<button><div class="line4"> <i class="fa-solid fa-envelope-circle-check"></i> Verify email   </div>  </button>
-<!-- line div closed -->
-</div>
+    <div class="verify">
+        <!-- Changed button text and type, added id -->
+        <button type="submit" id="signup-button"><div class="line4"> Sign Up </div></button>
+        <!-- line div closed -->
+    </div>
+</form>
 <!-- email section completed -->
 
-<div class="policy">
-    <pre>
-We’re committed to your privacy. AgriSaarthi uses the
-information you provide to us to contact you about our 
- relevant content and services. You may unsubscribe
-  at any time. For more information, check out
-               our <a href=""><strong>Privacy Policy<i class="fa-solid fa-square-arrow-up-right"></i></strong></a> 
+<!-- Added message area -->
+<div id="message-area" style="text-align: center; margin-top: 15px; color: red;"></div>
+
+<!-- Removed policy div -->
 
 </div>
-    
-    
 
-
-
-</div>
+<!-- Added script tag -->
+<script src="signup.js" defer></script>
 
    </body>
    </html>

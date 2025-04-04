@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Agrisaarthi</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Using user.css for consistency, can create marketplace.css if needed -->
+    <link rel="stylesheet" href="user.css">
+    <style>
+        /* Basic styling for links */
+        .marketplace-links {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .marketplace-links h2 {
+            margin-bottom: 30px;
+        }
+        .marketplace-links a {
+            display: inline-block;
+            margin: 10px 20px;
+            padding: 15px 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            background-color: #f8f8f8;
+            transition: background-color 0.3s ease;
+        }
+        .marketplace-links a:hover {
+            background-color: #e7e7e7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Standard Profile Header -->
+    <header class="header">
+        <h1>Agrisaarthi</h1>
+        <nav class="nav-links">
+            <a href="user.html">Dashboard</a>
+            <a href="marketplace.html">Marketplace</a> <!-- Active link -->
+            <select id="language-selector nav-links">
+                   <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+        </nav>
+        <div class="user-menu">
+            <button id="user-button"><i class="fa-solid fa-user"></i></button>
+            <div class="user-dropdown" id="user-dropdown">
+                <a href="#">Profile</a>
+                <a href="#" id="logout-button">Logout</a>
+            </div>
+        </div>
+    </header>
+    <script>
+        // Standard user menu script
+        document.getElementById("user-button").addEventListener("click", function () {
+            var dropdown = document.getElementById("user-dropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
+        window.addEventListener("click", function (e) {
+            if (!document.querySelector(".user-menu").contains(e.target)) {
+                document.getElementById("user-dropdown").style.display = "none";
+            }
+        });
+    </script>
+
+    <!-- Main Content -->
+    <main class="marketplace-links">
+        <h2>Agrisaarthi Tools</h2>
+        <p>Access prediction tools to help manage your farm.</p>
+        <div>
+            <a href="analyse.html">
+                <i class="fa-solid fa-leaf"></i> Plant Disease Analysis
+            </a>
+            <a href="track.html">
+                <i class="fa-solid fa-recycle"></i> Waste Volume Prediction
+            </a>
+            <!-- Add more marketplace features/links here as needed -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Easy Solutions. All rights reserved.</p>
+    </footer>
+
+    <!-- Include profile.js for auth check and logout -->
+    <script src="profile.js" defer></script>
+</body>
+</html>
