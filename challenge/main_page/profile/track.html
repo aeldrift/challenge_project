@@ -7,20 +7,43 @@
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="track.css">
+    <!-- Changed stylesheet link -->
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="track.css"> <!-- Keep track specific styles if any -->
 
 </head>
 <body>
+    <!-- Replaced header with standard profile header -->
     <header class="header">
-        <h1>Agrisaarthi</h1>  
+        <h1>Agrisaarthi</h1>
         <nav class="nav-links">
-            <!-- <a href="#">Support</a> -->
-            <!-- <div class="options"> -->
-                <select id="language-selector nav-links">
-                       <option value="en">English</option>
-                    <option value="hi">हिन्दी</option>
-                </select>  </nav>
-         </header>
+            <a href="user.html">Dashboard</a>
+            <a href="marketplace.html">Marketplace</a>
+            <select id="language-selector nav-links">
+                   <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+        </nav>
+        <div class="user-menu">
+            <button id="user-button"><i class="fa-solid fa-user"></i></button>
+            <div class="user-dropdown" id="user-dropdown">
+                <a href="#">Profile</a>
+                <a href="#" id="logout-button">Logout</a>
+            </div>
+        </div>
+    </header>
+    <script>
+        // Added standard user menu script
+        document.getElementById("user-button").addEventListener("click", function () {
+            var dropdown = document.getElementById("user-dropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
+        window.addEventListener("click", function (e) {
+            if (!document.querySelector(".user-menu").contains(e.target)) {
+                document.getElementById("user-dropdown").style.display = "none";
+            }
+        });
+    </script>
 
 <div class="map_bg">
  <!-- image inserted -->
@@ -70,11 +93,58 @@
         
             <!-- Load Google Maps API -->
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU-yBhTWxUNdbeOm7RIqTkjXahlnL_emc&callback=initMap" async defer></script>
- </div> </div>
-</body>
+        </div>
+    </div>
+</div> <!-- map_bg closed -->
+
+<!-- Added Waste Prediction Section -->
+<main style="padding: 20px; max-width: 600px; margin: 20px auto; border: 1px solid #ccc; border-radius: 8px;">
+    <h2>Waste Volume Prediction</h2>
+    <p>Enter the details below to predict the potential waste volume.</p>
+
+    <form id="waste-form" style="margin-top: 20px; display: grid; gap: 15px;">
+        <div>
+            <label for="crop">Crop:</label>
+            <input type="text" id="crop" name="crop" required>
+        </div>
+        <div>
+            <label for="season">Season:</label>
+            <input type="text" id="season" name="season" required>
+        </div>
+        <div>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+        <div>
+            <label for="area">Area (e.g., in acres):</label>
+            <input type="number" id="area" name="area" step="any" required>
+        </div>
+        <div>
+            <label for="fertilizer">Fertilizer Usage (e.g., kg/acre):</label>
+            <input type="number" id="fertilizer" name="fertilizer" step="any" required>
+        </div>
+        <div>
+            <label for="pesticide">Pesticide Usage (e.g., liters/acre):</label>
+            <input type="number" id="pesticide" name="pesticide" step="any" required>
+        </div>
+
+        <button type="submit" id="predict-waste-button" style="padding: 10px 20px; justify-self: center;">Predict Waste Volume</button>
+    </form>
+
+    <div id="waste-result-area" style="margin-top: 30px; text-align: left; border: 1px solid #ccc; padding: 15px; min-height: 50px; background-color: #f9f9f9;">
+        <h3>Prediction Result:</h3>
+        <pre id="waste-prediction-result">Waiting for prediction...</pre>
+    </div>
+    <div id="message-area" style="text-align: center; margin-top: 15px; color: red;"></div>
+</main>
 
 <footer>
     <p>&copy; 2025 Easy Solutions. All rights reserved.</p>
 </footer>
 
+<!-- Added script tags -->
+<script src="profile.js" defer></script>
+<!-- Removed track.js -->
+
+</body>
 </html>
