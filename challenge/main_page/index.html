@@ -19,21 +19,15 @@
 
         <div class="menu_bar"> <div class="logo"> AgriSaarthi</div>
        
-        
-            <div class="selector">
+            
+            
       <div class="account">
-        <div class="lang_select">
-        <select id="language-selector">
-            <option value="en">English</option>
-            <option value="hi">हिन्दी</option>
-        </select>
-        </div></div></div>
- <div class="icon"> <div class="account_icon"><a href="profile/account.html"> <i class="fa-solid fa-user user"></i>  </div>  </a>
+ <div class="icon"> <div class="account_icon"><a href="about/signin.html"> <i class="fa-solid fa-user user"></i>  </div>  </a> <!-- Changed href to about/signin.html -->
  <!-- <div class="acc_msg"> <strong> Acccount </strong></div> -->
 </div>
       </div>     
         </div>
-   
+       
    </header> 
     
     
@@ -42,7 +36,7 @@
      <div class="hero_sec">
                    <!-- agri_image -->
                    
-                  
+                    
 
 <!-- hero message -->
     <div class="hero-options"> 
@@ -50,7 +44,7 @@
 
      <!-- menu_bar_options  -->
     
-              <div class="opt1 opt">  <a onclick="scrollToSection('home_options')"> HOME </a>   
+              <div class="opt1 opt">  <a href="index.html"> HOME </a>   </div> <!-- Changed HOME link -->
         <!-- LOGIC APPLID USING JS for home -->
 <script>
     function scrollToSection(id) {
@@ -62,6 +56,7 @@
 </script>
 <!-- home option is completed -->
                            <div class="opt2 opt">  <a href="about/about.html"> ABOUT </a>  </div>
+                            <div class="opt3 opt">  <a href="profile/marketplace.html">MARKETPLACE</a>  </div>
                                     <!-- <div class="opt3 opt">   <a href="services/services.html">  SERVICES </a>   </div>        -->
                             <div class="opt4 opt" id="home_options">  <a onclick="scrollToSection('services_column')">TESTIMONALS</a>  </div>
                            
@@ -83,17 +78,16 @@
                       <button id="theme-toggle"> <i class="fa-solid fa-moon"></i>
                         </button>
                    </main>  
-            </div>
-        </div>
+            </div></div>
 
             <div class="hero-message" >  
                 <!-- search bar -->
-                <!-- <select class="search-select">  -->
-                    <!-- <option> All</option>   
-                      <option> All categories</option>   <option>  skills</option> 
+                <select class="search-select"> 
+                    <option> All</option>   
+                      <option> All categories</option>   <option>  skills</option> <option>  Devices</option> 
                         <option> category</option> 
                            
-                         </select> -->
+                         </select>
 
                 <input placeholder="&nbsp;&nbsp; SEARCH" class="search-input"> 
                 <div class="search-icon">
@@ -209,10 +203,14 @@
 
 <!-- AI chat support -->
 
- <!-- Chat Button -->
- <button class="ai-support-button" onclick="toggleChat()"><a href="https://arshsenpai.duckdns.org/?c=b87e078f-ebc9-4d27-aaa6-66942de782b3"> <i class="fa-regular fa-comment-dots"></i></button></a>
+ <!-- Chat Button (Corrected: Now a styled link) -->
+ <a href="https://arshsenpai.duckdns.org/" class="ai-support-button" target="_blank" rel="noopener noreferrer">
+     <i class="fa-regular fa-comment-dots"></i>
+ </a>
+ <!-- Removed duplicate chat-box div -->
+ <!-- Chat Window (Keep this one if needed for future JS implementation) -->
  <div class="chat-box" id="chatBox">
-     <div class="chat-header">AI Support</div>
+     <div class="chat-header">
  </div>
 
 <!-- Chat Window -->
@@ -236,4 +234,3 @@
     
 </body>
 </html>
-
