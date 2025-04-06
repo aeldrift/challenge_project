@@ -42,70 +42,45 @@
 
 <div class="hero_sec2">
 
-    <div class="box1">
-        <div class="line1">
+    <!-- Removed the duplicated box1 div -->
+    <!-- Removed partition div -->
+    <!-- Removed box3 comment -->
+
+    <!-- Keep only the form -->
+    <form id="login-form" style="margin: auto; /* Center the form */">
+        <div class="box1">
+            <div class="line1">
            Email address
         </div>   <!-- line1 completed -->
         <div class="mail_address">
-    
-            <input placeholder="abc@gmail.com" class="input_mail">
-        
+            <!-- Added id="email" -->
+            <input placeholder="abc@gmail.com" class="input_mail" id="email" type="email" required>
+
            </div>
-        
            <!-- mail input is done -->
+        <!-- Added password input and id -->
+        <div class="line1" style="margin-top: 15px;">
+           Password
+        </div>
+        <div class="mail_address">
+            <input type="password" placeholder="Enter your password" class="input_mail" id="password" required>
+        </div>
         <!-- verifying mail -->
-        
-        <div class="verify"> 
- <button input="submit"> Next</button>
-    </div> </div>
+        <!-- Added id="login-button" and changed to type="submit" -->
+        <div class="verify">
+            <button type="submit" id="login-button">Login</button>
+        </div>
+    </div>
+</form>
     <!-- box1 completed -->
 <div class="partition">
 
 </div>
-<!-- partition completed -->
+    <!-- Removed partition div -->
+    <!-- Removed box2 (social login) div -->
 
-<!-- box3 (at right side) started-->
-       
-<div class="box2">
-    <div class="box2_sec1"> 
-        <div class="outer_box">       
-              <div class="google_box"> <i class="fa-brands fa-google icon1"></i>
-         </div> 
-     </div> <!-- icon div closed -->
-        <div class="line"><strong> Continue with Google </strong> </div>  
-        <!-- line div closed -->
-        </div>
-    
-
-   
-
-   <!-- by microsoft -->
-   <div class="sec2"> 
-          
-          <div class="icon"><i class="fa-brands fa-microsoft icon2"></i>
-    
- </div> <!-- icon div closed -->
-    <div class="line2"><strong> Sign up with Microsoft </strong> </div>  
-    <!-- line div closed -->
-    </div>
- 
-
-
-
-<!-- by apple -->
-
-<div class="sec3"> 
-          
-    <div class="icon3"><i class="fa-brands fa-apple"></i>
-
-</div> <!-- icon div closed -->
-<div class="line3"><strong> &nbsp; &nbsp; Sign up with Apple  </strong> </div>  
-<!-- line div closed -->
-</div>
-
-  </div>
-</div>
-
+    <!-- Added a div for displaying messages inside the form container area -->
+    <div id="message-area" style="text-align: center; margin-top: 15px; color: red; grid-column: 1 / -1; /* Span across if using grid */"></div>
 
 <!-- login secton completed -->
 
@@ -122,8 +97,8 @@
 </div>
 </div>
 
-
-
+<!-- Added script tag -->
+<script src="signin.js" defer></script>
 
 </body>
 </html>

@@ -94,14 +94,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const data = await response.json();
 
+                // Log the exact structure received
+                console.log('Exact data received from API:', JSON.stringify(data, null, 2));
+
                 if (response.ok) {
-                    console.log('Analysis successful:', data);
-                    // Display the result (assuming data.result contains the prediction)
-                    // Adjust based on the actual structure of data.result from the Python API
-                    resultArea.textContent = JSON.stringify(data.result, null, 2);
-                    messageArea.textContent = ''; // Clear any previous errors
+                    messageArea.textContent = ''; // Clear errors early
+
+                    // --- Format the result for better display (Simplified Test) ---
+                    try {
+                        if (data && data.disease && data.info) {
+                            const disease = data.disease;
+                            const info = data.info;
+
+                            // Simple HTML: Heading for disease, <pre> for info
+                            // const simpleHtmlOutput = `<h3>${disease}</h3><pre>${info}</pre>`; // Keep simplified logic commented for now
+
+                            // **** Diagnostic Step: Check if resultArea exists and try setting textContent ****
+                            if (resultArea) {
+                                console.log("resultArea element found. Attempting to set textContent...");
+                                resultArea.textContent = `Disease Found: ${disease}`; // Test basic text setting
+                                console.log("Successfully set textContent for resultArea.");
+
+                                // Now try innerHTML again, maybe after a tiny delay? (Less likely to help, but trying)
+                                // setTimeout(() => {
+                                //     console.log("Attempting innerHTML again...");
+                                //     resultArea.innerHTML = `<h3>${disease}</h3><pre>${info}</pre>`;
+                                //     console.log("innerHTML attempt finished.");
+                                // }, 10);
+
+                            } else {
+                                console.error("!!! resultArea element NOT FOUND !!!");
+                            }
+                            // **** End Diagnostic Step ****
+
+                        } else {
+                            // Data structure is not as expected
+                            console.error("API response structure unexpected:", data);
+                            resultArea.textContent = `Unexpected data format: ${JSON.stringify(data, null, 2)}`;
+                        }
+                    } catch (displayError) {
+                         // Catch errors during the simplified display attempt
+                        console.error("Error setting simplified HTML output:", displayError);
+                        resultArea.textContent = `Error displaying result: ${displayError.message}. Raw data: ${JSON.stringify(data, null, 2)}`;
+                    }
+                    // --- End formatting ---
+
                 } else {
-                    console.error('Analysis failed:', data);
+                    console.error('Analysis failed (non-OK response):', data);
                     messageArea.textContent = data.message || 'Analysis failed. Please try again.';
                     resultArea.textContent = 'Analysis failed.';
                 }
