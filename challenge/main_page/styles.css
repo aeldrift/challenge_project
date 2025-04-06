@@ -99,19 +99,20 @@
    background-size: cover;
    display: flex;
    background-color: transparent;
+   margin-top: 0px;
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
    
     
 }
 
-.hero-options {
+.hero_options {
     color: transparent;
     background-color: transparent;
-       
+       display: flex;
         margin-bottom: 155px;
-        margin-left: 300px;
+        margin-left: 650px;
         margin-right: 940px;
-       margin-top: 5rem;
+       margin-top: 0px;
         /* padding-top: 10px; */
         padding-left: 45px;
         padding-right: 45px;
@@ -135,34 +136,34 @@
 }
 
 .opt1 {
-    margin-left: 475px;
+    margin-left: 15px;
     align-items: center;
     background-color: none;
    
 }
 .opt2 {
-    margin-left:45px;
+    margin-left:25px;
     align-items: center;
     
 }
 .opt3 {
-    margin-left: 45px;
+    margin-left: 25px;
     align-items: center;
     background-color: none;
 }
 .opt4 {
-    margin-left: 45px;
+    margin-left: 25px;
     align-items: center;
     background-color: none;
 }
 .opt5 {
-    margin-left: 45px;
+    margin-left: 25px;
     align-items: center;
     background-color: none;
 }
 
 .opt6 {
-    margin-left: 45px;
+    margin-left: 25px;
     align-items: center;
     background-color: none;
     
@@ -224,18 +225,17 @@ button:hover {
     opacity: 0.8;
 }
 
-
-.hero-message {
+.hero_message {
     background-color:black;
     color: #0f1111;
     height: 52px;
     text-align: center;
     font-size: 14px;
     width: 780px; 
-    margin-top: 250px;
-    margin-left: 70px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    
     display: flex;
-
     border-top-right-radius: 27px;
      border-bottom-right-radius: 27px;
      border-top-left-radius: 27px;
@@ -610,14 +610,10 @@ border-bottom-right-radius: 25px;
     margin-bottom: 10px;
     
 }
-
-
-
 /* Footer */
-footer {
+.footer {
     background-color: #398a56;
     box-shadow: #98dda2;
-    /* background-image: url("images/footer.png"); */
     color: rgb(0, 0, 0);
     padding: 20px 0;
     text-align: center;
@@ -625,6 +621,4 @@ footer {
     height: 60px;
     margin-top: 10px;
     margin-bottom: 0px;
-    /* box-upper-shadow: 0 -4px 8px #88d6b2; */
-    
 }

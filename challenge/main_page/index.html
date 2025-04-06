@@ -39,26 +39,26 @@
                     
 
 <!-- hero message -->
-    <div class="hero-options"> 
+    <div class="hero_options"> 
        
 
      <!-- menu_bar_options  -->
     
-              <div class="opt1 opt">  <a href="index.html"> HOME </a>   </div> <!-- Changed HOME link -->
+              <div class="opt1 opt">  <a href="index.html"> HOME </a>  </div> <!-- Changed HOME link -->
         <!-- LOGIC APPLID USING JS for home -->
 <script>
     function scrollToSection(id) {
         const account= document.getElementById(id);
         if (account) {
-            account.scrollIntoView({ behavior: 'smooth' });
+            account.scrollIntoView({ behavior: 'smooth' }); 
         }
     }
 </script>
 <!-- home option is completed -->
                            <div class="opt2 opt">  <a href="about/about.html"> ABOUT </a>  </div>
-                            <div class="opt3 opt">  <a href="profile/marketplace.html">MARKETPLACE</a>  </div>
+                            <div class="opt3 opt">  <a href="about/analyse.html">MARKETPLACE</a>  </div>
                                     <!-- <div class="opt3 opt">   <a href="services/services.html">  SERVICES </a>   </div>        -->
-                            <div class="opt4 opt" id="home_options">  <a onclick="scrollToSection('services_column')">TESTIMONALS</a>  </div>
+                            <div class="opt4 opt" id="home_options">  <a onclick="scrollToSection('services_column')">TESTIMONALS</a>  </div> 
                            
 <!-- LOGIC APPLID USING JS for testimonals-->
 <script>
@@ -69,7 +69,7 @@
         }
     }
 </script>      <!--testimonals option is completed -->
-                        <div class="opt5 opt">  <a href="contact/contact.html">  CONTACT </a>  </div>  
+                        <div class="opt5 opt">  <a href="contact.html">  CONTACT </a>  </div>  
                         
                         
      <!-- THEME CHANGEr--> 
@@ -78,28 +78,8 @@
                       <button id="theme-toggle"> <i class="fa-solid fa-moon"></i>
                         </button>
                    </main>  
-            </div></div>
-
-            <div class="hero-message" >  
-                <!-- search bar -->
-                <select class="search-select"> 
-                    <option> All</option>   
-                      <option> All categories</option>   <option>  skills</option> <option>  Devices</option> 
-                        <option> category</option> 
-                           
-                         </select>
-
-                <input placeholder="&nbsp;&nbsp; SEARCH" class="search-input"> 
-                <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                
-                       </div> 
-                       
-                                </div>
-         
-        
-       
-            </div>
+            </div></div>  
+            </div>  
 
        
          <!-- SCRIPT SECTION -->
@@ -223,14 +203,17 @@
         <p>Welcome! How can we help you?</p>
         <input type="text" placeholder="Type a message..." class="chat-input">
     </div>
-</div>
-
+</div>  </div>
 <!-- footer -->
 
 <footer>
-    <p>&copy; 2025 Easy Solutions. All rights reserved.</p>
+    <div class="footer">
+            <p>&copy; 2025 Easy Solutions. All rights reserved.</p>
+            </div>
 </footer>
 
-    
 </body>
 </html>
+    
+
+

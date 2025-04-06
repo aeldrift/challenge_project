@@ -388,6 +388,7 @@ svg {
 
 .policy a {
     text-decoration: none;
+  
 }
 
 .policy a:hover {
@@ -398,5 +399,6 @@ svg {
     margin-left: 550px;
     margin-top: 0px;
     font-size: 15px;
+    height: 10px;
 
 }
