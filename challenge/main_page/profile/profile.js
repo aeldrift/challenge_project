@@ -160,13 +160,84 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.log('Raw response from API:', response);
 
                 const data = await response.json();
+                console.log('Exact data received from API:', JSON.stringify(data, null, 2)); // Log structure
 
                 if (response.ok) {
-                    console.log('Analysis successful:', data);
-                    resultArea.textContent = JSON.stringify(data, null, 2);
-                    messageArea.textContent = ''; // Clear any previous errors
+                    messageArea.textContent = ''; // Clear errors early
+
+                    // --- Format the result for better display ---
+                    try {
+                        if (data && data.disease && data.info) { // Use 'data' directly
+                            const disease = data.disease;
+                            let info = data.info;
+                            let htmlContent = ''; // Build content separately
+
+                            // 1. Replace **Headings:** first
+                            info = info.replace(/\*\*(Preventive Measures:)\*\*/g, '<h4>$1</h4>');
+                            info = info.replace(/\*\*(Control Measures:)\*\*/g, '<h4>$1</h4>');
+
+                            // 2. Replace *italics*
+                            info = info.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+                            // 3. Process lines for paragraphs and lists
+                            const lines = info.split('\n');
+                            let inList = false;
+
+                            for (const line of lines) {
+                                const trimmedLine = line.trim();
+                                if (trimmedLine.startsWith('* ')) {
+                                    // Handle list items
+                                    if (!inList) {
+                                        htmlContent += '<ul>'; // Start list
+                                        inList = true;
+                                    }
+                                    // Add list item (substring removes '* ')
+                                    htmlContent += `<li>${trimmedLine.substring(2)}</li>`;
+                                } else {
+                                    // Handle non-list items
+                                    if (inList) {
+                                        htmlContent += '</ul>'; // End list
+                                        inList = false;
+                                    }
+                                    if (trimmedLine.length > 0) {
+                                        // Keep existing <h4> tags, wrap others in <p>
+                                        if (trimmedLine.startsWith('<h4>')) {
+                                            htmlContent += trimmedLine;
+                                        } else {
+                                            htmlContent += `<p>${trimmedLine}</p>`;
+                                        }
+                                    }
+                                    // Ignore empty lines
+                                }
+                            }
+                            // Close list if the text ends with one
+                            if (inList) {
+                                htmlContent += '</ul>';
+                            }
+
+                            // Combine disease heading and formatted content
+                            if (resultArea) { // Check if resultArea exists
+                                resultArea.innerHTML = `<h3>${disease}</h3>${htmlContent}`;
+                                console.log("Successfully set formatted HTML output in profile.js.");
+                            } else {
+                                console.error("resultArea element not found when trying to display formatted results.");
+                            }
+
+                        } else {
+                            // Data structure is not as expected
+                            console.error("API response structure unexpected:", data);
+                            if (resultArea) resultArea.textContent = `Unexpected data format: ${JSON.stringify(data, null, 2)}`;
+                        }
+                    } catch (formatError) {
+                         // Catch errors specifically from the formatting logic
+                        console.error("Error formatting API response in profile.js:", formatError);
+                        // Display error and raw data upon formatting failure
+                        if (resultArea) resultArea.textContent = `Error displaying result: ${formatError.message}. Raw data: ${JSON.stringify(data, null, 2)}`;
+                    }
+                    // --- End formatting ---
+
                 } else {
-                    console.error('Analysis failed:', data);
+                    console.error('Analysis failed (non-OK response):', data);
                     messageArea.textContent = data.message || 'Analysis failed. Please try again.';
                     resultArea.textContent = 'Analysis failed.';
                 }
@@ -290,18 +361,42 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 if (response.ok) {
                     console.log('Waste prediction successful:', data);
-                    // Display the result - get element reference just before update
                     const displayElement = document.getElementById('waste-prediction-result');
+                    const msgElement = document.getElementById('message-area');
+
                     if (displayElement) {
-                        // Corrected: Stringify the 'data' object directly, not 'data.result'
-                        displayElement.innerText = JSON.stringify(data, null, 2);
+                        try {
+                            // Format the waste prediction results
+                            const yieldPerArea = data.predicted_yield_per_unit_area;
+                            const totalYield = data.total_yield;
+                            const waste = data.waste;
+
+                            // Check if values are numbers before formatting
+                            const formattedYieldPerArea = typeof yieldPerArea === 'number' ? yieldPerArea.toFixed(3) : 'N/A';
+                            const formattedTotalYield = typeof totalYield === 'number' ? totalYield.toFixed(3) : 'N/A';
+                            const formattedWaste = typeof waste === 'number' ? waste.toFixed(3) : 'N/A';
+
+                            let htmlOutput = `<h4>Waste Prediction Result</h4>`;
+                            htmlOutput += `<ul>`;
+                            htmlOutput += `<li>Predicted Yield per Unit Area: ${formattedYieldPerArea} (Production per unit area)</li>`;
+                            htmlOutput += `<li>Total Estimated Yield: ${formattedTotalYield} (Metric Tons)</li>`;
+                            htmlOutput += `<li>Estimated Waste Volume: ${formattedWaste} (Metric Tons)</li>`;
+                            htmlOutput += `</ul>`;
+
+                            displayElement.innerHTML = htmlOutput;
+                            console.log("Successfully set formatted HTML for waste prediction with descriptions.");
+
+                        } catch (formatError) {
+                            console.error("Error formatting waste prediction data:", formatError);
+                            displayElement.textContent = `Error displaying result: ${formatError.message}. Raw data: ${JSON.stringify(data, null, 2)}`;
+                        }
                     } else {
                         console.error("Could not find element with ID 'waste-prediction-result' to display results.");
                     }
-                    const msgElement = document.getElementById('message-area');
-                     if(msgElement) msgElement.textContent = ''; // Clear errors
+
+                    if(msgElement) msgElement.textContent = ''; // Clear errors
                 } else {
-                    console.error('Waste prediction failed:', data);
+                    console.error('Waste prediction failed (non-OK response):', data);
                     const displayElement = document.getElementById('waste-prediction-result');
                     if (displayElement) displayElement.textContent = 'Prediction failed.';
                     const msgElement = document.getElementById('message-area');
