@@ -1,9 +1,0 @@
-pandas
-fastapi
-scikit-learn
-uvicorn
-transformers
-pillow
-torch
-python-multipart
-google-genai
