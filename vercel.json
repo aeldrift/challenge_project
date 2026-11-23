@@ -4,8 +4,8 @@
     "api": {
       "root": "api",
       "framework": "fastapi",
-      "entrypoint": "index:app"
-    },
+      "entrypoint": "main:app"
+    },  
     "backend": {
       "root": "backend",
       "framework": "express"
