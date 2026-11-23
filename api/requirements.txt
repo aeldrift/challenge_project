@@ -7,3 +7,4 @@ pillow
 torch
 python-multipart
 google-genai
+# Vercel deployment
