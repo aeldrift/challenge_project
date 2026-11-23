@@ -7,7 +7,8 @@
     },
     "backend": {
       "root": "backend",
-      "framework": "express"
+      "framework": "fastapi",
+      "entrypoint": "index.py"
     },
     "frontend": {
       "root": "challenge"
