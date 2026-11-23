@@ -3,12 +3,12 @@
   "services": {
     "api": {
       "root": "api",
-      "framework": "fastapi"
+      "framework": "fastapi",
+      "entrypoint": "index.py"
     },
     "backend": {
       "root": "backend",
-      "framework": "fastapi",
-      "entrypoint": "index.py"
+      "framework": "express"
     },
     "frontend": {
       "root": "challenge"
@@ -19,6 +19,12 @@
       "source": "/api/(.*)",
       "destination": {
         "service": "backend"
+      }
+    },
+    {
+      "source": "/farmx/(.*)",
+      "destination": {
+        "service": "api"
       }
     },
     {
