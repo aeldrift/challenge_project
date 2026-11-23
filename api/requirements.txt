@@ -8,4 +8,4 @@ numpy
 pandas
 scikit-learn
 joblib
-transformers==4.57.1
+transformers
