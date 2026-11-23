@@ -1,5 +1,5 @@
-pandas
 fastapi
+pandas
 scikit-learn
 uvicorn
 transformers
