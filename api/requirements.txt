@@ -1,10 +1,10 @@
 fastapi
-pandas
-scikit-learn
 uvicorn
-transformers
-pillow
-torch
 python-multipart
 google-genai
-# Vercel deployment
+python-dotenv
+Pillow
+numpy
+pandas
+scikit-learn
+joblib
