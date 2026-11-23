@@ -1,6 +1,13 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-from transformers import AutoImageProcessor, AutoModelForImageClassification
+# from transformers import AutoImageProcessor, AutoModelForImageClassification
+preprocessor = AutoImageProcessor.from_pretrained(
+    "linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification"
+)
+
+model = AutoModelForImageClassification.from_pretrained(
+    "linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification"
+)
 from PIL import Image
 import io
 from google import genai
